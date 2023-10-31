@@ -16,7 +16,9 @@ public class SimpleCharacterController : MonoBehaviour
     void Update()
     {
         // Check if the character is grounded.
-        isGrounded = Physics.Raycast(transform.position, Vector3.down, 1.1f);
+        isGrounded = Physics.Raycast(transform.position, Vector3.down, 5f);
+
+        Debug.Log(isGrounded);
 
         // Move the character.
         float horizontalInput = Input.GetAxis("Horizontal");
